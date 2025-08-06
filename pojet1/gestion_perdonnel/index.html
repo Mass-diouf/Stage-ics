@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <script src="module/employes.js"></script>
+    <script src="module/gestionnaire.js"></script>
+    <title>personnel</title>
+</head>
+<body>
+   
+       <div id="principal">
+
+            <div class="titre">
+            <h1 id="titre_ajouter">Ajouter un Empoye <br><br>   <hr color="green"> </h1>
+          
+        </div>
+
+    <div class="formulaire">
+  <form id="form-ajout">
+        <div class="in">
+            <label>Matricule</label>
+            <input type="text" id="matricule">
+        </div>
+        <div class="in">
+            <label>Prénom</label>
+            <input type="text" id="prenom">
+        </div>
+        <div class="in">
+            <label>Nom</label>
+            <input type="text" id="nom">
+        </div>
+        <div class="in">
+            <label>Sexe</label>
+            <input type="radio" name="sexe" value="Homme"> Homme
+            <input type="radio" name="sexe" value="Femme"> Femme
+        </div>
+        <div class="in">
+            <label>Date de naissance</label>
+            <input type="date" id="naissance">
+        </div>
+        <div class="in">
+            <label>Fonction</label>
+            <input type="text" id="fonction">
+        </div>
+
+        <button type="submit" id="buton">Ajouter</button>
+</form>
+
+                
+            </div>
+    <div class="liste-employes">
+   <h2>Liste des Employés</h2>
+   <table id="table-employes">
+       <thead>
+           <tr>
+               <th>Matricule</th>
+               <th>Prénom</th>
+               <th>Nom</th>
+               <th>Sexe</th>
+               <th>Date de naissance</th>
+               <th>Fonction</th>
+               <th>Action</th>
+           </tr>
+       </thead>
+       <tbody>
+           <!-- Les lignes vont s’ajouter ici dynamiquement -->
+       </tbody>
+   </table>
+</div>
+<div class="supmod">
+<td data-label="Action">
+  <button class="action-btn btn-edit">Modifier</button>
+  <button class="action-btn btn-delete">Supprimer</button>
+</td>
+</div>
+
+
+
+       </div> 
+</body>
+</html>
