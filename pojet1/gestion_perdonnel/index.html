@@ -1,83 +1,85 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
-    <script src="module/employes.js"></script>
-    <script src="module/gestionnaire.js"></script>
-    <title>personnel</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Personnel</title>
+ 
+  <script type="module" src="app.js"></script>
 </head>
 <body>
-   
-       <div id="principal">
+  <div id="principal">
 
-            <div class="titre">
-            <h1 id="titre_ajouter">Ajouter un Empoye <br><br>   <hr color="green"> </h1>
-          
-        </div>
+    <div class="titre">
+      <h1 id="titre_ajouter">
+        Ajouter un Employé
+        <br /><br />
+        <hr color="green" />
+      </h1>
+    </div>
 
     <div class="formulaire">
-  <form id="form-ajout">
+      <form id="form-ajout">
         <div class="in">
-            <label>Matricule</label>
-            <input type="text" id="matricule">
+          <label for="matricule">Matricule</label>
+          <input type="text" id="matricule" />
         </div>
         <div class="in">
-            <label>Prénom</label>
-            <input type="text" id="prenom">
+          <label for="prenom">Prénom</label>
+          <input type="text" id="prenom" />
         </div>
         <div class="in">
-            <label>Nom</label>
-            <input type="text" id="nom">
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" />
         </div>
         <div class="in">
-            <label>Sexe</label>
-            <input type="radio" name="sexe" value="Homme"> Homme
-            <input type="radio" name="sexe" value="Femme"> Femme
+          <label>Sexe</label>
+          <input type="radio" id="sexe_homme" name="sexe" value="Homme" />
+          <label for="sexe_homme">Homme</label>
+          <input type="radio" id="sexe_femme" name="sexe" value="Femme" />
+          <label for="sexe_femme">Femme</label>
         </div>
         <div class="in">
-            <label>Date de naissance</label>
-            <input type="date" id="naissance">
+          <label for="naissance">Date de naissance</label>
+          <input type="date" id="naissance" />
         </div>
         <div class="in">
-            <label>Fonction</label>
-            <input type="text" id="fonction">
+          <label for="fonction">Fonction</label>
+          <input type="text" id="fonction" />
         </div>
 
-        <button type="submit" id="buton">Ajouter</button>
-</form>
+        <button type="submit" id="ajouter">Ajouter</button>
+      </form>
+    </div>
 
-                
-            </div>
     <div class="liste-employes">
-   <h2>Liste des Employés</h2>
-   <table id="table-employes">
-       <thead>
-           <tr>
-               <th>Matricule</th>
-               <th>Prénom</th>
-               <th>Nom</th>
-               <th>Sexe</th>
-               <th>Date de naissance</th>
-               <th>Fonction</th>
-               <th>Action</th>
-           </tr>
-       </thead>
-       <tbody>
-           <!-- Les lignes vont s’ajouter ici dynamiquement -->
-       </tbody>
-   </table>
+      <h2>Liste des Employés</h2>
+      <table id="table-employes">
+        <thead>
+          <tr>
+            <th>Matricule</th>
+            <th>Prénom</th>
+            <th>Nom</th>
+            <th>Sexe</th>
+            <th>Date de naissance</th>
+            <th>Fonction</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Les lignes seront ajoutées dynamiquement ici -->
+        </tbody>
+      </table>
+    </div>
+    <br>
+    <br>
+     <hr>
+     <div id="action-btn">
+ <a href="./modifier.html"><button type="button" id="btn-edit" class="btn-edit">Modifier</button></a> 
+ <a href="./supprimer.html"><button type="button" id="btn-delete" class="btn-delete">Supprimer</button></a> 
 </div>
-<div class="supmod">
-<td data-label="Action">
-  <button class="action-btn btn-edit">Modifier</button>
-  <button class="action-btn btn-delete">Supprimer</button>
-</td>
-</div>
 
-
-
-       </div> 
+      
+  </div>
 </body>
 </html>

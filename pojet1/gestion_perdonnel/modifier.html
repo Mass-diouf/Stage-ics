@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Modifier Employé</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 500px;
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="date"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    #form-modifier {
+      display: none;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h2> Rechercher un employé</h2>
+  <input type="text" id="recherche-matricule" placeholder="Entrer le matricule">
+  <button onclick="chercherEmploye()">Chercher</button>
+
+  <p id="message" class="error"></p>
+
+  <form id="form-modifier" onsubmit="modifierEmploye(event)">
+    <h2>✏️ Modifier les informations</h2>
+    <input type="hidden" id="matricule" name="matricule" />
+
+    <label for="prenom">Prénom</label>
+    <input type="text" id="prenom" name="prenom" required>
+
+    <label for="nom">Nom</label>
+    <input type="text" id="nom" name="nom" required>
+
+    <label for="date_naissance">Date de naissance</label>
+    <input type="date" id="date_naissance" name="date_naissance" required>
+
+    <label for="fonction">Fonction</label>
+    <input type="text" id="fonction" name="fonction" required>
+
+    <button type="submit">Enregistrer les modifications</button>
+  </form>
+
+  <script src="modifier.js"></script>
+</body>
+</html>
