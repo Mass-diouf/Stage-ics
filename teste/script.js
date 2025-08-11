@@ -97,5 +97,7 @@ function pair()
     
  }
  
- saluer()
+let m= document.getElementById("mass").textContent="j suis mass";
+alert(m);
+console.log(m);
 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Administration PharmaStock</title>
+<link rel="stylesheet" href="style.css" />
+<script src="script.js"></script>
+</head>
+<body id="admin-body">
+
+<header id="admin-header">
+  <h1 id="admin-title">Administration PharmaStock</h1>
+  <nav id="admin-nav">
+    <a href="index.html" id="btn-accueil">Retour Accueil</a>
+  </nav>
+</header>
+
+<main id="admin-main">
+  <div id="notifications">
+    
+  </div>
+
+  <form id="addMedicForm">
+    <input type="text" id="medicName" placeholder="Nom du médicament" required />
+    <input type="number" id="medicPrice" placeholder="Prix (FCFA)" min="0" required />
+    <input type="number" id="medicStock" placeholder="Quantité en stock" min="0" required />
+    <button type="submit" id="btn-add-medic">Ajouter médicament</button>
+  </form>
+
+  <table id="medicTable">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Catégorie</th>
+        <th>Prix (FCFA)</th>
+        <th>Stock</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="medicTableBody">
+      <!-- Médicaments listés ici -->
+    </tbody>
+  </table>
+</main>
+
+<script src="admin-script.js"></script>
+</body>
+</html>
